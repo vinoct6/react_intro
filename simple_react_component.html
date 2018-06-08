@@ -16,16 +16,14 @@
         class HelloWorld extends React.Component {
 
             render() {
-                return <p> Hello, Componentized world! </p>
+                return <p> Hello, {this.props.greetTarget}! </p>
             }
  
         }
 
         ReactDOM.render(
             <div> 
-             <HelloWorld/>
-             <HelloWorld/>
-             <HelloWorld/>
+             <HelloWorld greetTarget="Vinoth"/>
             </div>, 
             document.querySelector("#container")
         );

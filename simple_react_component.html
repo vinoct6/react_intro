@@ -21,9 +21,20 @@
  
         }
 
+        class Buttonify extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <button type={this.props.behavior}>{this.props.children}</button>
+                    </div>
+                );
+            }
+        }
+
         ReactDOM.render(
             <div> 
              <HelloWorld greetTarget="Vinoth"/>
+             <Buttonify behavior="submit">SEND DATA HELLO</Buttonify>
             </div>, 
             document.querySelector("#container")
         );
